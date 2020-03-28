@@ -1,0 +1,36 @@
+productName: PolkaKey
+appId: finance.w3.polkakey
+copyright: Copyright © 2020 W3 Finance
+
+asar: true
+
+directories:
+  buildResources: public/
+  output: dist/
+
+files:
+  - build/
+
+dmg:
+  sign: false
+  artifactName: "${productName}-v${version}.${ext}"
+
+mac:
+  artifactName: "${productName}-v${version}-${os}.${ext}"
+  category: public.app-category.tools
+  identity: null
+  target:
+    - zip
+    - dmg
+
+win:
+  artifactName: "${productName}-v${version}-setup.${ext}"
+  target:
+    - target: nsis
+      arch:
+        - x64
+
+linux:
+  artifactName: "${productName}-v${version}-${arch}.${ext}"
+  target:
+    - AppImage
