@@ -4,29 +4,60 @@ import {withStyles} from "@material-ui/core/styles";
 const WelcomeButton = withStyles({
     root: {
         textTransform: 'none',
-        fontSize: 16,
+        fontSize: 14,
         padding: '6px 12px',
         lineHeight: 2,
         margin: 16,
-        width: 200,
+        width: '25vw',
         fontFamily: [
             'Roboto'
-        ].join(',')
+        ].join(','),
+        background: '#e6007a'
     }
 })(Button);
 
-const SelectButton = withStyles({
+const GenerateButton = withStyles({
     root: {
         textTransform: 'none',
-        fontSize: 16,
+        fontSize: 14,
         padding: '6px 12px',
         lineHeight: 2.5,
         margin: 16,
-        width: 300,
+        width: '38vw',
         fontFamily: [
             'Roboto'
-        ].join(',')
+        ].join(','),
+        background: '#e6007a'
     }
 })(Button);
 
-export {WelcomeButton, SelectButton};
+const ReGenerateButton = withStyles({
+    root: {
+        textTransform: 'none',
+        fontSize: 12,
+        padding: '6px 12px',
+        lineHeight: 2,
+        marginTop: 30,
+        width: '25vw',
+        fontFamily: [
+            'Roboto'
+        ].join(','),
+        background: '#e6007a'
+    }
+})(Button);
+
+const BackButton = withStyles({
+    root: {
+        textTransform: 'none',
+        fontSize: 12,
+        padding: '6px 12px',
+        lineHeight: 2,
+        marginTop: 16,
+        width: '25vw',
+        fontFamily: [
+            'Roboto'
+        ].join(','),
+    }
+})(Button);
+
+export {WelcomeButton, GenerateButton, ReGenerateButton, BackButton};

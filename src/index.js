@@ -6,7 +6,7 @@ import {I18nextProvider} from "react-i18next";
 import i18n from "./i18n";
 import {HashRouter as Router, Switch, Route} from "react-router-dom";
 import Welcome from "./Welcome";
-import Select from './Select';
+import ActionButton from './ActionButton';
 import Address from "./Address";
 
 class MyApp extends React.Component {
@@ -16,8 +16,8 @@ class MyApp extends React.Component {
                 <I18nextProvider i18n={i18n}>
                     <Switch>
                         <Route exact path="/" component={Welcome}/>
-                        <Route exact path="/select" component={Select}/>
-                        <Route exact path="/address" component={Address}/>
+                        <Route exact path="/action" component={ActionButton}/>
+                        <Route exact path="/address/:type" component={Address}/>
                     </Switch>
                 </I18nextProvider>
             </Router>

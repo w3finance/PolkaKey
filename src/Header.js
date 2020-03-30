@@ -11,7 +11,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 function Header() {
     const [onLine, setOnline] = React.useState(navigator.onLine);
     const [language, setLanguage] = React.useState('en');
-    const {t,i18n} = useTranslation();
+    const {t, i18n} = useTranslation();
 
     // Online/Offline Event Detection
     const alertOnlineStatus = () => {
@@ -30,17 +30,18 @@ function Header() {
         <div className="App-header">
             <Tooltip title={t('github')}>
                 <IconButton color="secondary" aria-label="github" size="medium">
-                    <GitHubIcon/>
+                    <GitHubIcon style={{color: '#e6007a'}}/>
                 </IconButton>
             </Tooltip>
             <Tooltip title={t('network')}>
                 <IconButton color="secondary" aria-label="network" size="medium">
-                    {onLine ? <SentimentVeryDissatisfiedIcon/> : <SentimentVerySatisfiedIcon/>}
+                    {onLine ? <SentimentVeryDissatisfiedIcon style={{color: '#e6007a'}}/> :
+                        <SentimentVerySatisfiedIcon style={{color: '#e6007a'}}/>}
                 </IconButton>
             </Tooltip>
-            <Tooltip style={{marginRight: 10}} title={t('language')}>
-                <IconButton color="secondary" aria-label="settings" size="medium">
-                    <TranslateIcon onClick={toggleLanguage}/>
+            <Tooltip title={t('language')} style={{marginRight: 10}}>
+                <IconButton color="secondary" aria-label="settings" size="medium" onClick={toggleLanguage}>
+                    <TranslateIcon style={{color: '#e6007a'}}/>
                 </IconButton>
             </Tooltip>
         </div>

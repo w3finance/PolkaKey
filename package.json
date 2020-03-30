@@ -26,6 +26,10 @@
   "devDependencies": {
     "@material-ui/core": "^4.9.8",
     "@material-ui/icons": "^4.9.1",
+    "@polkadot/keyring": "^2.6.2",
+    "@polkadot/react-identicon": "^0.51.1",
+    "@polkadot/util": "^2.6.2",
+    "@polkadot/util-crypto": "^2.6.2",
     "@rescripts/cli": "^0.0.14",
     "@rescripts/rescript-env": "^0.0.12",
     "@testing-library/jest-dom": "^4.2.4",

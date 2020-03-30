@@ -5,8 +5,8 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import {useTranslation} from "react-i18next";
 import {useHistory} from "react-router-dom";
-import Button from "@material-ui/core/Button";
 import Header from "./Header";
+import {WelcomeButton} from "./Buttons";
 
 function Welcome() {
     const {t} = useTranslation();
@@ -17,11 +17,11 @@ function Welcome() {
     });
 
     const handleChange = (event) => {
-        setState({ ...state, [event.target.name]: event.target.checked });
+        setState({...state, [event.target.name]: event.target.checked});
     };
 
     const handleClick = () => {
-        history.push("/select")
+        history.push("/action")
     };
 
     return (
@@ -34,7 +34,7 @@ function Welcome() {
                         {t('tip1')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedA} onChange={handleChange} name="checkedA" />}
+                        control={<Checkbox checked={state.checkedA} onChange={handleChange} name="checkedA"/>}
                         label={t('yes')}
                     />
                 </div>
@@ -43,17 +43,17 @@ function Welcome() {
                         {t('tip2')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedB} onChange={handleChange} name="checkedB" />}
+                        control={<Checkbox checked={state.checkedB} onChange={handleChange} name="checkedB"/>}
                         label={t('yes')}
                     />
                 </div>
-                <Button variant="contained"
+                <WelcomeButton variant="contained"
                                color="secondary"
                                disabled={!(state.checkedA && state.checkedB)}
                                onClick={handleClick}
                 >
                     {t('begin')}
-                </Button>
+                </WelcomeButton>
             </div>
         </div>
     )
