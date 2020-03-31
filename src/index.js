@@ -5,9 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import {I18nextProvider} from "react-i18next";
 import i18n from "./i18n";
 import {HashRouter as Router, Switch, Route} from "react-router-dom";
-import Welcome from "./Welcome";
-import ActionButton from './ActionButton';
-import Address from "./Address";
+import {WelcomePage, ChoosePage, AddressPage} from "./App";
 
 class MyApp extends React.Component {
     render() {
@@ -15,9 +13,9 @@ class MyApp extends React.Component {
             <Router>
                 <I18nextProvider i18n={i18n}>
                     <Switch>
-                        <Route exact path="/" component={Welcome}/>
-                        <Route exact path="/action" component={ActionButton}/>
-                        <Route exact path="/address/:type" component={Address}/>
+                        <Route exact path="/" component={WelcomePage}/>
+                        <Route exact path="/choose" component={ChoosePage}/>
+                        <Route exact path="/address/:type/:keypair" component={AddressPage}/>
                     </Switch>
                 </I18nextProvider>
             </Router>
@@ -26,9 +24,7 @@ class MyApp extends React.Component {
 }
 
 ReactDOM.render(
-    <React.StrictMode>
-        <MyApp/>
-    </React.StrictMode>,
+    <MyApp/>,
     document.getElementById('root')
 );
 
