@@ -164,7 +164,7 @@ const AddressPage = React.memo(function () {
                 <Divider light orientation="horizontal" variant="middle" className={classes.divider}/>
                 <div className={classes.item}>
                     <Typography className={classes.title}>
-                        {t('privateKey')}
+                        {t('publicKey')}
                     </Typography>
                     <CopyTextField value={publicKey} multiline={true}/>
                 </div>

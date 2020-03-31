@@ -1,4 +1,6 @@
-This template was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Electron](https://www.electronjs.org/).
+# PolkaKey &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/w3finance/PolkaKey)
+
+PolkaKey was build with [Create React App](https://github.com/facebook/create-react-app) and [Electron](https://www.electronjs.org/).
 
 ## Available Scripts
 
@@ -23,3 +25,7 @@ Pack the app for production to the `dist` folder.<br />
 Your app is ready to be deployed!
 
 See the section about [electron-builder](https://www.electron.build/) for more information.
+
+## License
+
+[Apache-2.0](https://github.com/w3finance/PolkaKey/blob/master/LICENSE)
