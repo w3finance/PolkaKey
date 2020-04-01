@@ -1,9 +1,8 @@
 import React from 'react';
-import {render} from '@testing-library/react';
-import App from './App';
+import { fireEvent, waitFor, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import {WelcomePage, ChoosePage, AddressPage} from './App';
 
 test('renders', () => {
-    const {getByText} = render(<App/>);
-    const linkElement = getByText(/React Electron Template/i);
-    expect(linkElement).toBeInTheDocument();
+
 });

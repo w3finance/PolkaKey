@@ -18,8 +18,9 @@ import Identicon from "@polkadot/react-identicon";
 import Keyring from "@polkadot/keyring";
 import {u8aToHex} from "@polkadot/util/u8a";
 import {cryptoWaitReady} from "@polkadot/util-crypto/init";
-import {mnemonicGenerate, mnemonicToSeed} from "@polkadot/util-crypto/mnemonic";
+import {mnemonicGenerate} from "@polkadot/util-crypto/mnemonic";
 import SplitButton from "./SplitButton";
+import {Tooltip} from "@material-ui/core";
 
 const WelcomePage = React.memo(function () {
     const {t} = useTranslation();
@@ -101,11 +102,13 @@ const ChoosePage = React.memo(function () {
                 <div style={{height: '7vh'}}/>
                 <SplitButton options={['ed25519', 'sr25519']}
                              choose={handleChoose}
-                             helper={'Determines what cryptography will be used to create this account. Note that to validate on Polkadot, the session account must use "ed25519".\''}/>
+                             helper={t('helper')}/>
                 <div style={{height: '7vh'}}/>
-                <IconButton aria-label="generate" color="secondary" onClick={handleClick}>
-                    <ArrowForwardIcon/>
-                </IconButton>
+                <Tooltip title={t('generate')}>
+                    <IconButton aria-label="generate" color="secondary" onClick={handleClick}>
+                        <ArrowForwardIcon/>
+                    </IconButton>
+                </Tooltip>
             </div>
         </div>
     );
@@ -129,7 +132,7 @@ const AddressPage = React.memo(function () {
         } catch (e) {
             throw new Error("Generate Address failed");
         }
-    }, [type]);
+    }, [type, keypair]);
 
     const goBack = () => {
         history.push('/choose')
@@ -159,6 +162,9 @@ const AddressPage = React.memo(function () {
                     <Typography className={classes.title}>
                         {t('mnemonic')}
                     </Typography>
+                    <Typography className={classes.tips}>
+                        {t('tips')}
+                    </Typography>
                     <CopyTextField value={phrase} multiline={true}/>
                 </div>
                 <Divider light orientation="horizontal" variant="middle" className={classes.divider}/>
@@ -168,7 +174,7 @@ const AddressPage = React.memo(function () {
                     </Typography>
                     <CopyTextField value={publicKey} multiline={true}/>
                 </div>
-                <ReGenerateButton variant="outlined" color="secondary" onClick={reGenerate} startIcon={<RefreshIcon />}>
+                <ReGenerateButton variant="outlined" color="secondary" onClick={reGenerate} startIcon={<RefreshIcon/>}>
                     {t('regenerate')}
                 </ReGenerateButton>
                 <BackButton color="secondary" onClick={goBack}>
@@ -229,6 +235,15 @@ const useStyles = makeStyles(theme => ({
     title: {
         color: '#7F7F7F',
         fontSize: 14
+    },
+    tips: {
+        background: '#FF6666',
+        padding: '5px 10px',
+        color: '#FFF',
+        fontSize: 12,
+        lineHeight: 2,
+        borderRadius: 2,
+        margin: '2px 0'
     }
 }));
 

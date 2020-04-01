@@ -104,7 +104,7 @@ const LeftButton = withStyles({
         textTransform: 'none',
         fontSize: 14,
         lineHeight: 2.5,
-        width: '30vw',
+        width: '32vw',
         fontFamily: [
             'Roboto'
         ].join(','),

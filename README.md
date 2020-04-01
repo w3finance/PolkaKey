@@ -1,6 +1,6 @@
 # PolkaKey &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/w3finance/PolkaKey)
 
-PolkaKey was build with [Create React App](https://github.com/facebook/create-react-app) and [Electron](https://www.electronjs.org/).
+PolkaKey is build with [Create React App](https://github.com/facebook/create-react-app) and [Electron](https://www.electronjs.org/).
 
 ## Available Scripts
 
@@ -21,8 +21,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `yarn dist`
 
 Pack the app for production to the `dist` folder.<br />
-
-Your app is ready to be deployed!
 
 See the section about [electron-builder](https://www.electron.build/) for more information.
 
