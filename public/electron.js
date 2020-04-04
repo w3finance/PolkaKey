@@ -1,9 +1,9 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, Menu} = require('electron')
+const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const isDev = require('electron-is-dev')
-const log = require('electron-log');
-const {autoUpdater} = require("electron-updater");
+const log = require('electron-log')
+const {autoUpdater} = require("electron-updater")
 
 function createWindow() {
     // Create the browser window.
@@ -76,8 +76,8 @@ log.info('App starting...');
 // }
 
 app.on('ready', function () {
-    //Create the Menu
+    // Create the Menu
     // const menu = Menu.buildFromTemplate(template);
     // Menu.setApplicationMenu(menu);
-    autoUpdater.checkForUpdatesAndNotify().then(r => console.info(r));
+    autoUpdater.checkForUpdatesAndNotify().then(r => log.info(r));
 });
