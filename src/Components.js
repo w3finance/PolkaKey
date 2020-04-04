@@ -2,7 +2,7 @@ import React from 'react';
 import {useTranslation} from "react-i18next";
 import './App.css';
 import IconButton from '@material-ui/core/IconButton';
-import TranslateIcon from '@material-ui/icons/Translate';
+import LanguageIcon from '@material-ui/icons/Language';
 import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -42,7 +42,7 @@ const Header = React.memo(function () {
         <div className="App-header">
             <Tooltip title={t('github')}>
                 <IconButton color="secondary" aria-label="github" size="medium" onClick={openGithub}>
-                    <GitHubIcon style={{color: '#e6007a'}}/>
+                    <GitHubIcon style={{color: '#e6007a'}} fontSize="small"/>
                 </IconButton>
             </Tooltip>
             <Tooltip title={onLine ? t('network2') : t('network1')}>
@@ -53,7 +53,7 @@ const Header = React.memo(function () {
             </Tooltip>
             <Tooltip title={t('language')} style={{marginRight: 10}}>
                 <IconButton color="secondary" aria-label="settings" size="medium" onClick={toggleLanguage}>
-                    <TranslateIcon style={{color: '#e6007a'}}/>
+                    <LanguageIcon style={{color: '#e6007a'}}/>
                 </IconButton>
             </Tooltip>
         </div>
@@ -85,7 +85,7 @@ const CopyTextField = React.memo(function (props) {
                             aria-label="copy"
                             onClick={copy}
                 >
-                    <FileCopyIcon style={{color: '#670d35'}}/>
+                    <FileCopyIcon style={{color: '#670d35', opacity: '0.8',}} fontSize="small"/>
                 </IconButton>
             </Tooltip>
         </Paper>

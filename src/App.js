@@ -25,6 +25,7 @@ import {Tooltip} from "@material-ui/core";
 const WelcomePage = React.memo(function () {
     const {t} = useTranslation();
     const history = useHistory();
+    const classes = useStyles();
     const [state, setState] = React.useState({
         checkedA: false,
         checkedB: false,
@@ -48,8 +49,9 @@ const WelcomePage = React.memo(function () {
                         {t('tip1')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedA} onChange={handleChange} name="checkedA"/>}
+                        control={<Checkbox checked={state.checkedA} onChange={handleChange} size="small" name="checkedA"/>}
                         label={t('yes')}
+                        classes={{label: classes.labelPlacementEnd}}
                     />
                 </div>
                 <div style={{width: '65vw'}}>
@@ -57,8 +59,9 @@ const WelcomePage = React.memo(function () {
                         {t('tip2')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedB} onChange={handleChange} name="checkedB"/>}
+                        control={<Checkbox checked={state.checkedB} onChange={handleChange} size="small" name="checkedB"/>}
                         label={t('yes')}
+                        classes={{label: classes.labelPlacementEnd}}
                     />
                 </div>
                 <WelcomeButton variant="contained"
@@ -210,7 +213,6 @@ function addressFromPhrase(phrase, type, keypair) {
 }
 
 async function generateAddress(type, keypair) {
-    console.log(type + keypair);
     const phrase = await mnemonicGenerate();// Mnemonic
     await cryptoWaitReady();
     const {address, publicKey} = await addressFromPhrase(phrase, type, keypair);
@@ -238,12 +240,16 @@ const useStyles = makeStyles(theme => ({
     },
     tips: {
         background: '#FF6666',
+        opacity: '0.9',
         padding: '5px 10px',
         color: '#FFF',
         fontSize: 12,
         lineHeight: 2,
-        borderRadius: 2,
+        borderRadius: 3,
         margin: '2px 0'
+    },
+    labelPlacementEnd: {
+        fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji'
     }
 }));
 
