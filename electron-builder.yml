@@ -8,8 +8,14 @@ directories:
   buildResources: public/
   output: dist/
 
-files:
-  - build/
+publish:
+  - github
+
+nsis:
+  oneClick: false
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  runAfterFinish: false
 
 dmg:
   sign: false
@@ -24,6 +30,7 @@ mac:
     - dmg
 
 win:
+  verifyUpdateCodeSignature: false
   artifactName: "${productName}-v${version}-setup.${ext}"
   target:
     - target: nsis
@@ -32,5 +39,6 @@ win:
 
 linux:
   artifactName: "${productName}-v${version}-${arch}.${ext}"
+  category: Tools
   target:
     - AppImage
