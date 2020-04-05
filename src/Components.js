@@ -7,14 +7,13 @@ import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissa
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Tooltip from '@material-ui/core/Tooltip';
-import {clipboard} from "electron";
+// import {clipboard} from "electron";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import {makeStyles} from "@material-ui/core/styles";
 
-const {shell} = require('electron');
-
+// const {shell} = require('electron');
 
 const Header = React.memo(function () {
     const [onLine, setOnline] = React.useState(navigator.onLine);
@@ -35,7 +34,7 @@ const Header = React.memo(function () {
     };
 
     const openGithub = () => {
-        shell.openExternal('https://github.com/w3finance/PolkaKey').then(r => console.log(r))
+        // shell.openExternal('https://github.com/w3finance/PolkaKey').then(r => console.log(r))
     };
 
     return (
@@ -66,7 +65,7 @@ const CopyTextField = React.memo(function (props) {
     const {t} = useTranslation();
 
     const copy = () => {
-        clipboard.writeText(value, 'clipboard');
+        // clipboard.writeText(value, 'clipboard');
     };
 
     return (

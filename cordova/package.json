@@ -1,0 +1,71 @@
+{
+  "name": "PolkaKey",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A secure and simple way to generate a Polkadot/Kusama address.",
+  "homepage": "./",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf src/* && rimraf www/*",
+    "build": "yarn clean && cp -a ../src/. src && react-scripts build && node scripts/postbuild.js",
+    "install:android": "cordova platform add android",
+    "install:ios": "cordova platform add ios",
+    "run:android": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run android\"",
+    "run:ios": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run ios\""
+  },
+  "dependencies": {
+    "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^4.9.8",
+    "@material-ui/icons": "^4.9.1",
+    "@polkadot/keyring": "^2.6.2",
+    "@polkadot/react-identicon": "^0.51.1",
+    "@polkadot/util": "^2.6.2",
+    "@polkadot/util-crypto": "^2.6.2",
+    "concurrently": "^5.1.0",
+    "cordova-plugin-badge": "^0.8.8",
+    "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-local-notification": "^0.9.0-beta.2",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "i18next": "^19.3.4",
+    "react-i18next": "^11.3.4",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "rimraf": "^3.0.2",
+    "wait-on": "^4.0.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
