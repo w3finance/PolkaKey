@@ -21,6 +21,8 @@ PolkaKey is build with [Polkadot.JS](https://github.com/polkadot-js) and [Electr
 
 Runs on Mac OS, Windows and Linux.
 
+Thanks for Web3 Foundation [Grants](https://github.com/w3f/Open-Grants-Program/blob/master/applications/PolkaKey.md).
+
 ## Download
 
 See <https://github.com/w3finance/PolkaKey/releases>. You will find the binaries there.
