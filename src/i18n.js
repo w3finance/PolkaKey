@@ -22,7 +22,7 @@ i18n.init({
                 "back": "Back",
                 "copy": "Click to Copy",
                 "generate": "Generate",
-                "helper": "Determines what cryptography will be used to create this account. It's recommended that you use sr25519, unless you want to create a session account in order to validate on Polkadot.",
+                "helper": "Determines what cryptography will be used to create this account. It's recommended that you use sr25519 as default, unless you want to create a session account in order to validate on Polkadot.",
                 "tips": "Only paste your secret key in 100% safe places"
             }
         },

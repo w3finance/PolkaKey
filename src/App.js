@@ -49,7 +49,8 @@ const WelcomePage = React.memo(function () {
                         {t('tip1')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedA} onChange={handleChange} size="small" name="checkedA"/>}
+                        control={<Checkbox checked={state.checkedA} onChange={handleChange} size="small"
+                                           name="checkedA"/>}
                         label={t('yes')}
                         classes={{label: classes.labelPlacementEnd}}
                     />
@@ -59,7 +60,8 @@ const WelcomePage = React.memo(function () {
                         {t('tip2')}
                     </Typography>
                     <FormControlLabel
-                        control={<Checkbox checked={state.checkedB} onChange={handleChange} size="small" name="checkedB"/>}
+                        control={<Checkbox checked={state.checkedB} onChange={handleChange} size="small"
+                                           name="checkedB"/>}
                         label={t('yes')}
                         classes={{label: classes.labelPlacementEnd}}
                     />
@@ -125,7 +127,8 @@ const AddressPage = React.memo(function () {
 
     const [{address, phrase, publicKey}, setValues] = React.useState({});
     const theme = 'polkadot';
-    const size = 50;
+    const size = 44;
+    const chain = firstUpperCase(type.replace(':', ''));
 
     useEffect(() => {
         try {
@@ -156,7 +159,7 @@ const AddressPage = React.memo(function () {
                 />
                 <div className={classes.item}>
                     <Typography className={classes.title}>
-                        {t('address')}
+                        {`${chain + ' ' + t('address')}`}
                     </Typography>
                     <CopyTextField value={address}/>
                 </div>
@@ -187,6 +190,10 @@ const AddressPage = React.memo(function () {
         </div>
     );
 });
+
+function firstUpperCase(str) {
+    return str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+}
 
 const keyringEd25519 = new Keyring({type: 'ed25519'});
 const keyringSr25519 = new Keyring({type: 'sr25519'});

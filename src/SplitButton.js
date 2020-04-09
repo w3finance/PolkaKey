@@ -59,7 +59,7 @@ export default function SplitButton(props) {
                         <ArrowDropDownIcon/>
                     </ArrowButton>
                 </CustomButtonGroup>
-                { helper ? <Tooltip disableHoverListener title={helper} style={{marginLeft: 5}}><HelpOutlineIcon color="secondary"/></Tooltip> : null}
+                { helper ? <Tooltip title={helper} style={{marginLeft: 5}}><HelpOutlineIcon color="secondary"/></Tooltip> : null}
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal
                         style={{zIndex: 2}}>
                     {({TransitionProps, placement}) => (
