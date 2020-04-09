@@ -12,6 +12,7 @@ function createWindow() {
         height: 600,
         maxWidth: 800,
         maxHeight: 600,
+        titleBarStyle: process.platform === 'darwin' ? 'hidden' : 'default',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true

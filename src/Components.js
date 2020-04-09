@@ -7,13 +7,13 @@ import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissa
 import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Tooltip from '@material-ui/core/Tooltip';
-// import {clipboard} from "electron";
+import {clipboard} from "electron";
 import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
 import {makeStyles} from "@material-ui/core/styles";
 
-// const {shell} = require('electron');
+const {shell} = require('electron');
 
 const Header = React.memo(function () {
     const [onLine, setOnline] = React.useState(navigator.onLine);
@@ -34,23 +34,23 @@ const Header = React.memo(function () {
     };
 
     const openGithub = () => {
-        // shell.openExternal('https://github.com/w3finance/PolkaKey').then(r => console.log(r))
+        shell.openExternal('https://github.com/w3finance/PolkaKey').then(r => console.log(r))
     };
 
     return (
-        <div className="App-header">
-            <Tooltip title={t('github')}>
+        <div className="App-header" style={{WebkitAppRegion: 'drag'}}>
+            <Tooltip title={t('github')} style={{WebkitAppRegion: 'no-drag'}}>
                 <IconButton color="secondary" aria-label="github" size="medium" onClick={openGithub}>
                     <GitHubIcon style={{color: '#e6007a'}} fontSize="small"/>
                 </IconButton>
             </Tooltip>
-            <Tooltip title={onLine ? t('network2') : t('network1')}>
+            <Tooltip title={onLine ? t('network2') : t('network1')} style={{WebkitAppRegion: 'no-drag'}}>
                 <IconButton color="secondary" aria-label="network" size="medium">
                     {onLine ? <SentimentVeryDissatisfiedIcon style={{color: '#e6007a'}}/> :
                         <SentimentVerySatisfiedIcon style={{color: '#e6007a'}}/>}
                 </IconButton>
             </Tooltip>
-            <Tooltip title={t('language')} style={{marginRight: 10}}>
+            <Tooltip title={t('language')} style={{marginRight: 10, WebkitAppRegion: 'no-drag'}}>
                 <IconButton color="secondary" aria-label="settings" size="medium" onClick={toggleLanguage}>
                     <LanguageIcon style={{color: '#e6007a'}}/>
                 </IconButton>
@@ -65,7 +65,7 @@ const CopyTextField = React.memo(function (props) {
     const {t} = useTranslation();
 
     const copy = () => {
-        // clipboard.writeText(value, 'clipboard');
+        clipboard.writeText(value, 'clipboard');
     };
 
     return (
