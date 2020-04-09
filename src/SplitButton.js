@@ -104,7 +104,7 @@ const LeftButton = withStyles({
         textTransform: 'none',
         fontSize: 14,
         lineHeight: 2.5,
-        width: '30vw',
+        width: '33vw',
         fontFamily: [
             'Roboto'
         ].join(','),
@@ -127,7 +127,7 @@ const ArrowButton = withStyles({
 
 const CustomMenuList = withStyles({
     root: {
-        width: '30vw',
+        width: '33vw',
     },
     '@media screen and (max-width: 500px)': {
         root: {
