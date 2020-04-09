@@ -25,11 +25,13 @@ Runs on Mac OS, Windows and Linux.
 
 See <https://github.com/w3finance/PolkaKey/releases>. You will find the binaries there.
 
+## Tutorial
+
+See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md>.
+
 ## Development
 
 To clone and run this repo you'll need [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed on your computer.
-
-## Available Scripts
 
 In the project directory, you can run:
 

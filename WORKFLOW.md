@@ -1,4 +1,4 @@
-## WorkFlow
+## UI for showcase
 
 - When users open the App, they will see this page. We have reminded users that they can use PolkaKey offline, and PolkaKey will not save any data locally. After agreeing to these two points, they can take the next step.
 
@@ -14,7 +14,7 @@
 
 ![](./workflow/address.png)
 
-### Tips
+### Note
 
 At present, the App supports Auto-Update on Windows and Linux. See the section about [Auto-Update](https://www.electron.build/auto-update) for more information.
 
