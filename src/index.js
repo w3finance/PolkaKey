@@ -23,16 +23,16 @@ class MyApp extends React.Component {
     }
 }
 
-const renderReactDom = () => {
-    ReactDOM.render(<MyApp />, document.getElementById('root'));
+const renderReact = () => {
+    ReactDOM.render(<MyApp/>, document.getElementById('root'));
 };
 
 if (window.cordova) {
     document.addEventListener('deviceready', () => {
-        renderReactDom();
+        renderReact();
     }, false);
 } else {
-    renderReactDom();
+    renderReact();
 }
 
 // If you want your app to work offline and load faster, you can change

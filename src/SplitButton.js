@@ -43,7 +43,7 @@ export default function SplitButton(props) {
 
     return (
         <Grid container direction="column" alignItems="center" style={{marginLeft: helper ? 24+5 : 0}}>
-            <Grid item xs={12} style={{display: 'flex'}} alignItems="center">
+            <Grid item xs={12} style={{display: 'flex', overflow: 'hidden'}} alignItems="center">
                 <CustomButtonGroup variant="contained" color="secondary" ref={anchorRef} aria-label="split button"
                              style={{zIndex: 1}}>
                     <LeftButton color="secondary" disableRipple disableFocusRipple onClick={handleClick}>{options[selectedIndex]}</LeftButton>
@@ -59,7 +59,7 @@ export default function SplitButton(props) {
                         <ArrowDropDownIcon/>
                     </ArrowButton>
                 </CustomButtonGroup>
-                { helper ? <Tooltip title={helper} style={{marginLeft: 5}}><HelpOutlineIcon color="secondary"/></Tooltip> : null}
+                { helper ? <Tooltip disableHoverListener title={helper} style={{marginLeft: 5}}><HelpOutlineIcon color="secondary"/></Tooltip> : null}
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal
                         style={{zIndex: 2}}>
                     {({TransitionProps, placement}) => (
@@ -104,12 +104,17 @@ const LeftButton = withStyles({
         textTransform: 'none',
         fontSize: 14,
         lineHeight: 2.5,
-        width: '32vw',
+        width: '30vw',
         fontFamily: [
             'Roboto'
         ].join(','),
         background: '#e6007a',
         borderRadius: 25
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '66vw',
+        }
     }
 })(Button);
 
@@ -123,5 +128,10 @@ const ArrowButton = withStyles({
 const CustomMenuList = withStyles({
     root: {
         width: '30vw',
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '66vw',
+        }
     }
 })(MenuList);

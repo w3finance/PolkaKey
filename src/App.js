@@ -44,7 +44,7 @@ const WelcomePage = React.memo(function () {
             <Header/>
             <div className="Container">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <div style={{width: '65vw'}}>
+                <div className={classes.welcome}>
                     <Typography>
                         {t('tip1')}
                     </Typography>
@@ -54,7 +54,7 @@ const WelcomePage = React.memo(function () {
                         classes={{label: classes.labelPlacementEnd}}
                     />
                 </div>
-                <div style={{width: '65vw'}}>
+                <div className={classes.welcome}>
                     <Typography>
                         {t('tip2')}
                     </Typography>
@@ -224,6 +224,9 @@ async function generateAddress(type, keypair) {
 }
 
 const useStyles = makeStyles(theme => ({
+    welcome: {
+        width: '65vw',
+    },
     item: {
         width: '70vw',
         display: 'flex',
@@ -250,6 +253,17 @@ const useStyles = makeStyles(theme => ({
     },
     labelPlacementEnd: {
         fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji'
+    },
+    '@media screen and (max-width: 500px)': {
+        welcome: {
+            width: '80vw',
+        },
+        item: {
+            width: '80vw',
+        },
+        divider: {
+            width: '80vw',
+        }
     }
 }));
 

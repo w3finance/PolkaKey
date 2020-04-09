@@ -112,6 +112,11 @@ const useStyles = makeStyles(theme => ({
     },
     iconButton: {
         padding: 10,
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '80vw',
+        }
     }
 }));
 

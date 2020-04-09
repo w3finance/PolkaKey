@@ -7,13 +7,18 @@ const WelcomeButton = withStyles({
         fontSize: 14,
         lineHeight: 2.5,
         margin: 16,
-        width: '25vw',
+        width: '30vw',
         fontFamily: [
             'Roboto'
         ].join(','),
         background: '#e6007a',
         borderRadius: 25
-    }
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '50vw',
+        },
+    },
 })(Button);
 
 const ReGenerateButton = withStyles({
@@ -28,6 +33,11 @@ const ReGenerateButton = withStyles({
         ].join(','),
         // background: '#e6007a',
         borderRadius: 25
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '50vw',
+        },
     }
 })(Button);
 
@@ -42,7 +52,12 @@ const BackButton = withStyles({
             'Roboto'
         ].join(','),
         borderRadius: 25
-    }
+    },
+    '@media screen and (max-width: 500px)': {
+        root: {
+            width: '50vw',
+        },
+    },
 })(Button);
 
 export {WelcomeButton, ReGenerateButton, BackButton};
