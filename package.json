@@ -1,7 +1,7 @@
 {
   "name": "PolkaKey",
-  "version": "0.6.0",
-  "description": "A secure and simple way to generate a Polkadot/Kusama address",
+  "version": "0.7.0",
+  "description": "A secure and simple way to generate a Polkadot/Kusama/Edgeware address",
   "private": true,
   "author": {
     "name": "W3 Finance"
@@ -68,8 +68,8 @@
   },
   "keywords": [
     "Electron",
-    "Polkadot.JS",
-    "tutorial",
-    "create react app"
+    "Polkadot",
+    "Kusama",
+    "Edgeware"
   ]
 }

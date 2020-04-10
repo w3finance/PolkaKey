@@ -17,7 +17,7 @@ export default function SplitButton(props) {
     const {options, choose, helper} = props;
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
 
     const handleClick = () => {
         console.info(`You clicked ${options[selectedIndex]}`);
@@ -42,11 +42,15 @@ export default function SplitButton(props) {
     };
 
     return (
-        <Grid container direction="column" alignItems="center" style={{marginLeft: helper ? 24+5 : 0}}>
+        <Grid container direction="column" alignItems="center" style={{marginLeft: helper ? 24 + 5 : 0}}>
             <Grid item xs={12} style={{display: 'flex', overflow: 'hidden'}} alignItems="center">
-                <CustomButtonGroup variant="contained" color="secondary" ref={anchorRef} aria-label="split button"
-                             style={{zIndex: 1}}>
-                    <LeftButton color="secondary" disableRipple disableFocusRipple onClick={handleClick}>{options[selectedIndex]}</LeftButton>
+                <CustomButtonGroup variant="contained"
+                                   color="secondary"
+                                   ref={anchorRef}
+                                   aria-label="split button"
+                                   style={{zIndex: 1}}
+                >
+                    <LeftButton color="secondary" onClick={handleClick}>{options[selectedIndex]}</LeftButton>
                     <ArrowButton
                         color="secondary"
                         size="small"
@@ -59,7 +63,8 @@ export default function SplitButton(props) {
                         <ArrowDropDownIcon/>
                     </ArrowButton>
                 </CustomButtonGroup>
-                { helper ? <Tooltip title={helper} style={{marginLeft: 5}}><HelpOutlineIcon color="secondary"/></Tooltip> : null}
+                {helper ? <Tooltip title={helper} style={{marginLeft: 5}}><HelpOutlineIcon
+                    color="secondary"/></Tooltip> : null}
                 <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal
                         style={{zIndex: 2}}>
                     {({TransitionProps, placement}) => (
@@ -75,7 +80,6 @@ export default function SplitButton(props) {
                                         {options.map((option, index) => (
                                             <MenuItem
                                                 key={option}
-                                                disabled={index === 2}
                                                 selected={index === selectedIndex}
                                                 onClick={(event) => handleMenuItemClick(event, index)}
                                             >

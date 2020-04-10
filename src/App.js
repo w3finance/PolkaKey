@@ -90,8 +90,10 @@ const ChoosePage = React.memo(function () {
             setValues({...values, keypair: 'ed25519'});
         } else if (value.indexOf('Polkadot') !== -1) {
             setValues({...values, type: 'polkadot'});
-        } else {
+        } else if (value.indexOf('Kusama') !== -1) {
             setValues({...values, type: 'kusama'});
+        } else {
+            setValues({...values, type: 'edgeware'});
         }
     };
 
@@ -103,9 +105,10 @@ const ChoosePage = React.memo(function () {
         <div className="App">
             <Header/>
             <div className="Container">
-                <SplitButton options={[t('generateKusama'), t('generatePolkadot')]} choose={handleChoose}/>
+                <SplitButton options={[t('generatePolkadot'), t('generateKusama'), t('generateEdgeware')]}
+                             choose={handleChoose}/>
                 <div style={{height: '7vh'}}/>
-                <SplitButton options={['ed25519', 'sr25519']}
+                <SplitButton options={['sr25519', 'ed25519']}
                              choose={handleChoose}
                              helper={t('helper')}/>
                 <div style={{height: '7vh'}}/>
@@ -126,9 +129,9 @@ const AddressPage = React.memo(function () {
     const history = useHistory();
 
     const [{address, phrase, publicKey}, setValues] = React.useState({});
-    const theme = 'polkadot';
     const size = 44;
     const chain = firstUpperCase(type.replace(':', ''));
+    const theme = chain === 'Edgeware' ? 'jdenticon' : 'polkadot';
 
     useEffect(() => {
         try {
@@ -206,6 +209,9 @@ function addressFromPhrase(phrase, type, keypair) {
             break;
         case 'kusama':
             keyring.setSS58Format(0x02);
+            break;
+        case 'edgeware':
+            keyring.setSS58Format(0x07);
             break;
         default:
             keyring.setSS58Format(42);
