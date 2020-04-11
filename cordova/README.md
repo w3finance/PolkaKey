@@ -19,13 +19,13 @@ yarn
 Create the Android platform:
 
 ```
-yarn run install:android
+yarn install:android
 ```
 
 Create the development build:
 
 ```
-yarn run dev:android
+yarn dev:android
 ```
 
 Follow the steps in [Cordova Android - Installing the Requirements](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#installing-the-requirements) to setup your development environment.
@@ -38,13 +38,13 @@ You should now be able to run the app on device or emulator.
 Create the iOS platform:
 
 ```
-yarn run install:ios
+yarn install:ios
 ```
 
 Create the development build:
 
 ```
-yarn run dev:ios
+yarn dev:ios
 ```
 
 Troubleshooting: In case you see the infamous `error: tool 'xcodebuild' requires Xcode, but active developer directory '/Library/Developer/CommandLineTools' is a command line tools instance`, you need to run:
