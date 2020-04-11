@@ -10,8 +10,8 @@
     "build": "yarn clean && cp -a ../src/. src && react-scripts build && node scripts/postbuild.js",
     "install:android": "cordova platform add android",
     "install:ios": "cordova platform add ios",
-    "run:android": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run android\"",
-    "run:ios": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run ios\""
+    "dev:android": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run android\"",
+    "dev:ios": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run ios\""
   },
   "dependencies": {
     "cordova-android": "^8.1.0",

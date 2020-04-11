@@ -8,6 +8,9 @@
     <img alt="Latest stable release" src="https://badgen.net/github/release/w3finance/PolkaKey/stable" />
   </a>
   <a href="https://github.com/w3finance/PolkaKey/releases/latest">
+    <img alt="assets downloads for latest release" src="https://badgen.net/github/assets-dl/w3finance/PolkaKey" />
+  </a>
+  <a href="https://github.com/w3finance/PolkaKey/releases/latest">
     <img alt="MacOS" src="https://badgen.net/badge/icon/MacOS?icon=apple&label&color=cyan" />
   </a>
   <a href="https://github.com/w3finance/PolkaKey/releases/latest">
@@ -25,7 +28,7 @@ Runs on Mac OS, Windows and Linux.
 
 See <https://github.com/w3finance/PolkaKey/releases>. You will find the binaries there.
 
-## Tutorial
+## UI for showcase
 
 See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md>.
 
