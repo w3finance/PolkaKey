@@ -1,5 +1,7 @@
 # PolkaKey Mobile Apps
 
+> ⚠️ Active development.
+
 ## Development
 
 Navigate to cordova folder:

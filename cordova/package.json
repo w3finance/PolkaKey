@@ -2,7 +2,7 @@
   "name": "PolkaKey",
   "version": "0.1.0",
   "private": true,
-  "description": "A secure and simple way to generate a Polkadot/Kusama address.",
+  "description": "A secure and simple way to generate a Polkadot/Kusama/Edgeware address.",
   "homepage": "./",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "dev:ios": "concurrently \"yarn build\" \"wait-on www/index.html && cordova run ios\""
   },
   "dependencies": {
+    "cordova": "^9.0.0",
     "cordova-android": "^8.1.0",
+    "cordova-clipboard": "^1.3.0",
     "cordova-ios": "^5.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,6 +34,7 @@
     "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-local-notification": "^0.9.0-beta.2",
     "cordova-plugin-whitelist": "^1.3.4",
+    "cordova-plugin-wkwebview-engine": "^1.2.1",
     "i18next": "^19.3.4",
     "react-i18next": "^11.3.4",
     "react-router": "^5.1.2",
@@ -55,13 +58,15 @@
     ]
   },
   "keywords": [
-    "ecosystem:cordova"
+    "cordova"
   ],
-  "author": "Apache Cordova Team",
+  "author": "W3 Finance",
   "license": "Apache-2.0",
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-wkwebview-engine": {},
+      "cordova-clipboard": {}
     },
     "platforms": [
       "ios",
