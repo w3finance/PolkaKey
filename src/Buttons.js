@@ -31,7 +31,6 @@ const ReGenerateButton = withStyles({
         fontFamily: [
             'Roboto'
         ].join(','),
-        // background: '#e6007a',
         borderRadius: 25
     },
     '@media screen and (max-width: 500px)': {

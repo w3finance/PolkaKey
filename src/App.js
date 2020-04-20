@@ -265,7 +265,7 @@ const useStyles = makeStyles(theme => ({
         margin: '2px 0'
     },
     labelPlacementEnd: {
-        fontFamily: '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji'
+        fontFamily: '-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif,Apple Color Emoji'
     },
     '@media screen and (max-width: 500px)': {
         welcome: {
