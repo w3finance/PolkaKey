@@ -1,3 +1,5 @@
+// Copyright 2020 W3 Finance authors & contributors
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

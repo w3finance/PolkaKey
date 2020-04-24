@@ -28,7 +28,7 @@ Runs on Mac OS, Windows and Linux.
 
 See <https://github.com/w3finance/PolkaKey/releases>. You will find the binaries there.
 
-## UI for showcase
+## Showcase
 
 See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md>.
 

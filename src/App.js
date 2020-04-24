@@ -1,3 +1,5 @@
+// Copyright 2020 W3 Finance authors & contributors
+
 import React, {useEffect} from "react";
 import logo from "./logo.png";
 import './App.css';
@@ -280,4 +282,4 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export {WelcomePage, ChoosePage, AddressPage};
+export {WelcomePage, ChoosePage, AddressPage, addressFromPhrase};

@@ -1,3 +1,5 @@
+// Copyright 2020 W3 Finance authors & contributors
+
 import Button from "@material-ui/core/Button";
 import {withStyles} from "@material-ui/core/styles";
 

@@ -9,7 +9,9 @@ directories:
   output: dist/
 
 publish:
-  - github
+  - provider: github
+    owner: w3finance
+    repo: PolkaKey
 
 nsis:
   oneClick: false
@@ -19,15 +21,12 @@ nsis:
 
 dmg:
   sign: false
-  artifactName: "${productName}-v${version}.${ext}"
 
 mac:
   artifactName: "${productName}-v${version}-${os}.${ext}"
-  category: public.app-category.tools
-  identity: null
-  target:
-    - zip
-    - dmg
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: entitlements.mac.inherit.plist
 
 win:
   verifyUpdateCodeSignature: false
@@ -39,6 +38,8 @@ win:
 
 linux:
   artifactName: "${productName}-v${version}-${arch}.${ext}"
-  category: Tools
+  category: Utility
   target:
     - AppImage
+
+afterSign: afterSign.js

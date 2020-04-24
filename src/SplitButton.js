@@ -1,3 +1,5 @@
+// Copyright 2020 W3 Finance authors & contributors
+
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
