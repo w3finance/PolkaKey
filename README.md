@@ -8,7 +8,10 @@
     <img alt="Latest stable release" src="https://badgen.net/github/release/w3finance/PolkaKey/stable" />
   </a>
   <a href="https://github.com/w3finance/PolkaKey/releases/latest">
-    <img alt="assets downloads for latest release" src="https://badgen.net/github/assets-dl/w3finance/PolkaKey" />
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/w3finance/PolkaKey/total">
+  </a>
+  <a href="https://github.com/w3finance/PolkaKey/blob/master/LICENSE">
+    <img alt="License" src="https://badgen.net/github/license/w3finance/PolkaKey" />
   </a>
   <a href="https://github.com/w3finance/PolkaKey/releases/latest">
     <img alt="MacOS" src="https://badgen.net/badge/icon/MacOS?icon=apple&label&color=cyan" />
