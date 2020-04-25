@@ -27,13 +27,9 @@ PolkaKey is build with [Polkadot.JS](https://github.com/polkadot-js) and [Electr
 
 Runs on Mac OS, Windows and Linux.
 
-## Download
+## Download | 下载
 
 See <https://github.com/w3finance/PolkaKey/releases>. You will find the binaries there.
-
-## Showcase
-
-See <https://github.com/w3finance/PolkaKey/blob/master/WORKFLOW.md>.
 
 ## Development
 
@@ -41,16 +37,20 @@ To clone and run this repo you'll need [Node.js](https://nodejs.org/en/) and [Ya
 
 In the project directory, you can run:
 
-### `yarn dev`
+```bash
+yarn dev
+```
+Runs the app in the development mode.
 
-Runs the app in the development mode.<br />
-
-### `yarn test`
-
+```bash
+yarn test
+```
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn dist`
+```bash
+yarn dist
+```
 
 Pack the app for production to the `dist` folder.<br />
 
